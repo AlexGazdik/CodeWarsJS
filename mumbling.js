@@ -10,7 +10,7 @@ The parameter of accum is a string which includes only letters from a..z and A..
 
 
 function accum(s) {
-    var result = ''
+    const result = ''
     for (let i = 0; i < s.length; i++) {
         result += s[i].toUpperCase()
         result += s[i].toLowerCase().repeat(i)
