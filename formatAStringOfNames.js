@@ -15,7 +15,7 @@
 list = (names) => {
     const length = names.length
     if (length === 0) {
-        return [];
+        return '';
     }else if 
         (length === 1) {
             return names[0].name;
@@ -23,11 +23,13 @@ list = (names) => {
         return names[0].name + ' & ' + names[1].name
     }else    {
     const lastEntry = names.pop();
+    const secondToLast = names.pop()
     let retrnString = ''
     names.forEach(element => {
         element.name = element.name + ', '
     })
-    names.push({name: '& '})
+    names.push(secondToLast)
+    names.push({name: ' & '})
     names.push(lastEntry)
     names.forEach(element => {
         retrnString += element.name
