@@ -17,3 +17,6 @@ function spinWords(words) {
     }
     return reverseString.slice(0,reverseString.length -1)
 }
+
+// Single line solution
+splitWords = (words) => words.split(' ').map((word) =>(word.length > 4) ? word.split('').reverse().join('') : word).join(' ')
