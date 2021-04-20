@@ -18,3 +18,6 @@ function createPhoneNumber(numbers){
         let fullNumber = [].concat(areaCode,numberStart,numbersEnd)
         return fullNumber.join('')
 }
+
+// single line solution
+createPhoneNumber = (numbers) => numbers.join('').replace(/(...)(...)(....)/, '($1) $2-$3');
