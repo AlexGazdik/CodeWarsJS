@@ -9,3 +9,7 @@ function squareDigits(num){
     let result = arraySquares.join('');
     return Number(result);
     
+// FEFACTOR
+let squareDigit = (num) => {
+    return Number(num.toString().split('').map(x => x ** 2).join(''));
+}
